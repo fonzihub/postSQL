@@ -1,16 +1,21 @@
 1. SELECT *
-FROM users
-WHERE name = 'Mario'
+	FROM public.clienti
+	WHERE nome = 'Mario'
 
+2. SELECT nome , cognome
+	FROM public.clienti
+	WHERE anno_nascita = 1982
 
-2.SELECT name, surname
-	FROM public.users
-	WHERE year_birth = 1984
-
-3.SELECT id_invoice
-	FROM public.invoices
-	WHERE iva = '20'
+3.SELECT * FROM fatture WHERE iva = 22
 
 4.SELECT * FROM public.products
 WHERE activation_date = 2017
 OR on_market = TRUE;
+
+5.SELECT * FROM fatture f
+JOIN clienti c ON f.id_cliente = c.id_cliente
+WHERE importo <= 1000
+
+6. SELECT id_fatture, importo, iva, data_fattura , denominazione
+FROM fatture f
+JOIN fornitori x ON f.id_fornitore = x.id_fornitore
