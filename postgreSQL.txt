@@ -1,0 +1,16 @@
+1. SELECT *
+FROM users
+WHERE name = 'Mario'
+
+
+2.SELECT name, surname
+	FROM public.users
+	WHERE year_birth = 1984
+
+3.SELECT id_invoice
+	FROM public.invoices
+	WHERE iva = '20'
+
+4.SELECT * FROM public.products
+WHERE activation_date = 2017
+AND on_market = TRUE;
