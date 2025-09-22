@@ -13,4 +13,4 @@ WHERE name = 'Mario'
 
 4.SELECT * FROM public.products
 WHERE activation_date = 2017
-AND on_market = TRUE;
+OR on_market = TRUE;
